@@ -1,0 +1,1 @@
+find /eos/uscms/store/user/lnujj/ramkrishna/Ntuples/Ele/WJets_8TeV_sherpa_CMSSW532/rasharma/WJets_Mu_8TeV_Sherpa_CMSSW532/WJets_Mu_8TeV_Sherpa_CMSSW532/7047977f321e8b0186d3c6a586c74d59 -type f | xargs -n502

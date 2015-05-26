@@ -1,0 +1,10 @@
+universe = vanilla
+Executable = Job_TTJets.csh
+Requirements = Memory >= 199 &&OpSys == "LINUX"&& (Arch != "DUMMY" )&& Disk > 1000000
+Should_Transfer_Files = YES
+WhenToTransferOutput = ON_EXIT
+Output               = TTJets_$(Cluster)_$(Process).stdout
+Error                = TTJets_$(Cluster)_$(Process).stderr
+Log                  = TTJets_$(Cluster)_$(Process).log
+notify_user = ramkrishna.sharma71@gmail.com
+Queue 1
