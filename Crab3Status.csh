@@ -4,6 +4,20 @@ echo "Ramkrishna $1"
 
 set x = $1
 
+if ( $x == r ) then
+	if ( $2 == LL ) then
+        crab resubmit crab_projects/crab_GEN-SIM_Production_qqToWWqqTolnu4q_LL_13TeV_MGv1_5_14_cteq6l1_DECAYPkg/  --jobids $3 
+	endif
+	if ( $2 == LT ) then
+        crab resubmit crab_projects/crab_GEN-SIM_Production_qqToWWqqTolnu4q_LT_13TeV_MGv1_5_14_cteq6l1_DECAYPkg/  --jobids $3
+	endif
+	if ( $2 == TT ) then
+        crab resubmit crab_projects/crab_GEN-SIM_Production_qqToWWqqTolnu4q_TT_13TeV_MGv1_5_14_cteq6l1_DECAYPkg/  --jobids $3
+	endif
+	if ( $2 == TOT ) then
+        crab resubmit crab_projects/crab_GEN-SIM_Production_qqToWWqqTolnu4q_TOT_13TeV_MGv1_5_14_cteq6l1_DECAYPkg/ --jobids $3
+	endif
+endif
 if ( $x == v ) then
         crab status crab_projects/crab_GEN-SIM_Production_qqToWWqqTolnu4q_LL_13TeV_MGv1_5_14_cteq6l1_DECAYPkg/ --verboseErrors 
         crab status crab_projects/crab_GEN-SIM_Production_qqToWWqqTolnu4q_LT_13TeV_MGv1_5_14_cteq6l1_DECAYPkg/ --verboseErrors 
