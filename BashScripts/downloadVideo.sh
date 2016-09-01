@@ -7,7 +7,7 @@
 
 ifFileOrURL="file" 	# file or url
 
-playlistURL=https://www.youtube.com/watch?v=fV_ho7ks8SY		# Url link
+playlistURL=https://www.youtube.com/watch?v=Zdcth9NndEA		# Url link
 BatchFile=/home/ramkrishna/Videos/songs.dat	#Text file with youtube url
 
 downloadDirectory=/home/ramkrishna/Videos/SongsYoutube
@@ -28,8 +28,8 @@ if [[ "${ifFileOrURL}" == "file" ]]; then
 	else
 		if [[ "${format}" == "bothMP3MP4" ]]; then 
 			echo -e "${RED}youtube-dl --restrict-filenames --output ${downloadDirectory}/\"%(title)s.%(ext)s\" --extract-audio --audio-format ${format}  --batch-file ${BatchFile}${NC}"
-			youtube-dl --restrict-filenames --output ${downloadDirectory}/"%(title)s.%(ext)s" --batch-file ${BatchFile}
-			youtube-dl --restrict-filenames --output ${downloadDirectory}/"%(title)s.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 0 --batch-file ${BatchFile}
+			#youtube-dl --restrict-filenames --output ${downloadDirectory}/"%(title)s.%(ext)s" --batch-file ${BatchFile}
+			youtube-dl --restrict-filenames --output ${downloadDirectory}/"%(title)s.%(ext)s" --extract-audio --audio-format mp3 --audio-quality 0 -k --batch-file ${BatchFile}
 		else
 			echo -e "${RED}youtube-dl --restrict-filenames --output ${downloadDirectory}/\"%(title)s.%(ext)s\" --extract-audio --audio-format ${format}  --batch-file ${BatchFile}${NC}"
 			youtube-dl --restrict-filenames --output ${downloadDirectory}/"%(title)s.%(ext)s" --extract-audio --audio-format ${format}  --batch-file ${BatchFile}
